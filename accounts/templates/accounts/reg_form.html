@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    <title>Register</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+    <div class="container">
+        <h1>Register for Kanso.</h1>
+        <form class="form" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button type="submit" value="register" id="register-button">Register.</button>
+        <br><br><br><br><br><br><br><br><br>
+        </form>
+    </div>
+    {% endblock %}
+  </body>
+</html>

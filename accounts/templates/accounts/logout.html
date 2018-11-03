@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    <title>Login</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+    <div class="container">
+        <h1>You have logged out of Kanso.</h1>
+        <form class="form" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        </form>
+    </div>
+    {% endblock %}
+  </body>
+</html>
